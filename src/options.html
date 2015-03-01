@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { padding: 0 10px; }
+    label { cursor: pointer; user-select: none; }
+    hr { border: 0; height: 1px; background-color: #eee; margin: 8px 0; }
+    .options { padding: 3px 0; }
+    .option { padding: 3px 0; }
+    #save { margin-top: 5px; cursor: pointer; }
+    #status { color: green; }
+    .help-link { text-decoration: none; cursor: pointer; }
+    #cancel-container { user-select: none; }
+    #exclude_pattern { width: 210px; }
+  </style>
+</head>
+
+<body>
+  <div class="options">
+    <div class="option">
+      <label>
+        <input type="checkbox" id="popups">
+        Combine popup windows
+      </label>
+    </div>
+
+    <div class="option">
+      <label>
+        <input type="checkbox" id="panels">
+        Combine panel windows
+      </label>
+    </div>
+
+    <div class="option">
+      <label>
+        <input type="checkbox" id="apps">
+        Combine app windows
+      </label>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="option">
+    <label>
+      <input type="checkbox" id="exclude">
+      Exclude url pattern:
+      <input type="text" id="exclude_pattern">
+    </label>
+
+    <a id="exclude-pattern-help"
+       class="help-link"
+       href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">(?)</a>
+  </div>
+
+  <hr>
+
+  <button id="save">Save</button>
+  <span id="cancel-container">
+    or
+    <a href="#" id="cancel-link">cancel</a>
+  </span>
+  <span id="status"></span>
+
+  <script src="fusion.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
