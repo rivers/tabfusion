@@ -1,6 +1,6 @@
 {
   "name": "TabFusion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Combine all your Chrome tabs into a single window",
 
@@ -19,7 +19,7 @@
 
   "background": {
     "scripts": ["fusion.js", "listener.js"],
-    "persistent": false
+    "persistent": true
   },
 
   "options_ui": {
